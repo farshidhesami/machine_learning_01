@@ -65,6 +65,7 @@ for filepath_str in list_of_files:
     logging.info(f"Created or verified directory: {filepath.parent}")
 
     # Create or touch the file
+    # Checks if a file exists and if it's empty using Path.exists() and Path.stat().st_size.
     if not filepath.exists() or filepath.stat().st_size == 0:
         filepath.touch()
         logging.info(f"Created or verified file: {filepath}")
