@@ -4,7 +4,11 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
+<<<<<<< HEAD
 project_name = 'MachineLearning_2023'
+=======
+project_name = 'mlProject'
+>>>>>>> 4539b35 (update all stage)
 
 # list of files to be created
 list_of_files = [
