@@ -59,10 +59,12 @@ def save_json(path: Path, data: dict):
         path (Path): path to json file
         data (dict): data to be saved in json file
     """
-    with open(path, "w") as f:
-        json.dump(data, f, indent=4)
-
-    logger.info(f"json file saved at: {path}")
+    try:
+        with open(path, "w") as f:
+            json.dump(data, f, indent=4)
+        logger.info(f"json file saved at: {path}")
+    except Exception as e:
+        logger.error(f"Failed to save json file at: {path} with error: {e}")
 
 
 
@@ -77,11 +79,14 @@ def load_json(path: Path) -> ConfigBox:
     Returns:
         ConfigBox: data as class attributes instead of dict
     """
-    with open(path) as f:
-        content = json.load(f)
-
-    logger.info(f"json file loaded successfully from: {path}")
-    return ConfigBox(content)
+    try:
+        with open(path) as f:
+            content = json.load(f)
+        logger.info(f"json file loaded successfully from: {path}")
+        return ConfigBox(content)
+    except Exception as e:
+        logger.error(f"Failed to load json file from: {path} with error: {e}")
+        return None
 
 
 @ensure_annotations
@@ -106,9 +111,13 @@ def load_bin(path: Path) -> Any:
     Returns:
         Any: object stored in the file
     """
-    data = joblib.load(path)
-    logger.info(f"binary file loaded from: {path}")
-    return data
+    try:
+        data = joblib.load(path)
+        logger.info(f"binary file loaded from: {path}")
+        return data
+    except Exception as e:
+        logger.error(f"Failed to load binary file from: {path} with error: {e}")
+        return None
 
 
 
@@ -122,5 +131,10 @@ def get_size(path: Path) -> str:
     Returns:
         str: size in KB
     """
-    size_in_kb = round(os.path.getsize(path)/1024)
-    return f"~ {size_in_kb} KB"
+    try:
+        size_in_kb = round(os.path.getsize(path)/1024)
+        logger.info(f"Size of the file at: {path} is ~ {size_in_kb} KB")
+        return f"~ {size_in_kb} KB"
+    except Exception as e:
+        logger.error(f"Failed to get the size of the file at: {path} with error: {e}")
+        return None
