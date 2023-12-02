@@ -1,16 +1,15 @@
 import os
-from box.exceptions import BoxValueError
 import yaml
-from mlProject import logger
 import json
 import joblib
+from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
+from mlProject import logger
 
-
-
+# Exception handling for empty or invalid YAML files
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
@@ -36,7 +35,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise e
     
 
-
+# Creates each directory in the list, if it doesn't already exist
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
@@ -50,7 +49,7 @@ def create_directories(path_to_directories: list, verbose=True):
         if verbose:
             logger.info(f"created directory at: {path}")
 
-
+# Handles exceptions during JSON file writing
 @ensure_annotations
 def save_json(path: Path, data: dict):
     """save json data
@@ -68,7 +67,7 @@ def save_json(path: Path, data: dict):
 
 
 
-
+# Exception handling for loading JSON files
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """load json files data
@@ -88,7 +87,7 @@ def load_json(path: Path) -> ConfigBox:
         logger.error(f"Failed to load json file from: {path} with error: {e}")
         return None
 
-
+# Saves any serializable data as a binary file
 @ensure_annotations
 def save_bin(data: Any, path: Path):
     """save binary file
@@ -100,7 +99,7 @@ def save_bin(data: Any, path: Path):
     joblib.dump(value=data, filename=path)
     logger.info(f"binary file saved at: {path}")
 
-
+# Handles exceptions during binary file loading
 @ensure_annotations
 def load_bin(path: Path) -> Any:
     """load binary data
@@ -120,7 +119,7 @@ def load_bin(path: Path) -> Any:
         return None
 
 
-
+# Exception handling for getting file size
 @ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
