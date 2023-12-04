@@ -43,5 +43,17 @@ project)
      - Use of ConfigBox from the box library for handling configurations is a good choice for its simplicity and dot-access to dictionary keys .
 
 - 10- Add some python code mention in research/trials.ipynb(ConfigBox` class and ensure_annotations training).
-- 11- 
+
+- 11- Create a "Expriement.ipynb" : is likely a Jupyter notebook file used in the context of a Machine Learning (ML) project,use for :
+     - Loading and preprocessing data.
+     - Defining a model
+     - Training the model on the data
+     - Evaluating the model's performance
+     - Tuning the model's parameters.
+
+- 12- Download a "winequality-red.csv" file and then zip it or (https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+- 13- I uploaded in my Github path : https://github.com/farshidhesami/Branching-tutorial/blob/master/winequality-red.zip
+- 14- Go to path and click in file and right click on "View raw" and copy a link address: https://github.com/farshidhesami/Branching-tutorial/raw/master/winequality-red.zip
+- 15- Copy a "winequality-red.csv" file to my vscode explorer in data/winequality-red.csv .
+- 16- load a data .
 
