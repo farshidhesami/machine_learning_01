@@ -2,6 +2,18 @@
 
 ## Workflows :
 
+- update config.yaml
+- update schema.yaml (necessary here because used for data validation component,means that the schema defined in this file is used to check the validity of data in our
+project)    
+- update params.yaml (necessary here because this is regression model and This file is likely used to define parameters for a regression model in our project, Normally used in an elastic model, an ElasticNet regression model or similar ).
+- update the entity
+- update the configuration manager in src config
+- update the components
+- update the pipeline (refers to updating a data processing or machine learning pipeline)
+- update the main.py
+- update the app.py
+
+
 - 1- Create a template.py .( Run a "python template.py )
 - 2- Create a requirements.txt .
 - 3- Create a setup.py (Git Bash)
@@ -30,5 +42,6 @@
   - Note : 
      - Use of ConfigBox from the box library for handling configurations is a good choice for its simplicity and dot-access to dictionary keys .
 
-- 10-
+- 10- Add some python code mention in research/trials.ipynb(ConfigBox` class and ensure_annotations training).
+- 11- 
 
