@@ -55,7 +55,6 @@ project)
 - 13- I uploaded in my Github path : https://github.com/farshidhesami/Branching-tutorial/blob/master/winequality-red.zip
 - 14- Go to path and click in file and right click on "View raw" and copy a link address: https://github.com/farshidhesami/Branching-tutorial/raw/master/winequality-red.zip
 - 15- Copy a "winequality-red.csv" file to my vscode explorer in data/winequality-red.csv .
-- 16- load a data .
 
 ## Wine Quality Prediction Using Machine Learning.
 
@@ -97,5 +96,27 @@ project)
 - 4-Model Evaluation: Evaluate the model's performance using standard classification metrics such as accuracy, precision, recall, F1-score, and ROC-AUC. This will give you insights into how well the model can distinguish between good and not good wines.
 
 - 5-Practical Applications: The binary classification model can be valuable for wine producers and consumers. It simplifies the assessment of wine quality, making it easier for both experts and non-experts to make informed decisions.
+
+### Note :
+- There are different types of metrics for different types of machine learning tasks (classification, regression, clustering, etc.).
+
+- These are commonly used metrics for regression tasks:
+   - Root Mean Squared Error (RMSE) : 
+      - This is the square root of the average of the square of all the errors. RMSE gives a relatively high weight to large errors. This means the RMSE should be more useful when large errors are particularly undesirable.
+   - Mean Absolute Error (MAE) : 
+      - This is the average of the absolute differences between the predicted and actual values. It gives an idea of how wrong the predictions were.
+   - R-squared (R2) : 
+      - This is a statistical measure that represents the goodness of fit of a regression model. A higher R-squared indicates a better fit for the model.
+
+
+
+
+
+
+
+
+
+
+- 16- load a data .
 
 
