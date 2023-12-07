@@ -2,16 +2,16 @@
 
 ## Workflows :
 
-- update config.yaml
-- update schema.yaml (necessary here because used for data validation component,means that the schema defined in this file is used to check the validity of data in our
+- A- update config.yaml
+- B- update schema.yaml (necessary here because used for data validation component,means that the schema defined in this file is used to check the validity of data in our
 project)    
-- update params.yaml (necessary here because this is regression model and This file is likely used to define parameters for a regression model in our project, Normally used in an elastic model, an ElasticNet regression model or similar ).
-- update the entity
-- update the configuration manager in src config
-- update the components
-- update the pipeline (refers to updating a data processing or machine learning pipeline)
-- update the main.py
-- update the app.py
+- C- update params.yaml (necessary here because this is regression model and This file is likely used to define parameters for a regression model in our project, Normally used in an elastic model, an ElasticNet regression model or similar ).
+- D- update the entity
+- E- update the configuration manager in src config
+- F- update the components
+- G- update the pipeline (refers to updating a data processing or machine learning pipeline)
+- H- update the main.py
+- I- update the app.py
 
 
 - 1- Create a template.py .( Run a "python template.py )
@@ -111,6 +111,19 @@ project)
 - 16- The purpose of add a code in Expriement.ipynb is to show a End-To-End project and how to create any pipeline and prediction pipeline and how to combine a 
       end-to-end project .
 
-- 17- 
+- 17- How to see a dataset in URL ?
+- 18- Inside a research folder add other folder "01_data_ingestion.ipynb" .
+- 19- "A- update config.yaml", Go to "config.yaml" and add a code as a "artifacts_root" and "data_ingestion" .
+- 20- "B- update schema.yaml", Go to "schema.yaml" ,Just write a something in this phase like : key : val just fill a page .
+      - A schema.yaml is a YAML (YAML Ain't Markup Language) file that defines a schema for data structures or configurations. 
+      - YAML is a human-readable data serialization format commonly used for configuration files, but it can also be used for other purposes like data storage or 
+        inter-process communication .
 
-
+   - schema.yaml can serve various purposes::
+      - Data Validation: It can be used to define the expected structure of data, such as the fields present in a JSON or XML file.
+      - Configuration Management: In software applications, schema.yaml can define the structure and acceptable values for configuration settings.
+      - Database Schema Definition: In the context of databases, a schema.
+      - API Specification: For APIs, a schema.yaml file could be used to describe the API's structure .
+      - Data Interchange Formats: In contexts where data is exchanged between different systems, a schema.
+- 21- C- update params.yaml : Just write a something in this phase like : key : val just fill a page .   
+- 22- D- update the entity : 
