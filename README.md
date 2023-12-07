@@ -108,15 +108,9 @@ project)
    - R-squared (R2) : 
       - This is a statistical measure that represents the goodness of fit of a regression model. A higher R-squared indicates a better fit for the model.
 
+- 16- The purpose of add a code in Expriement.ipynb is to show a End-To-End project and how to create any pipeline and prediction pipeline and how to combine a 
+      end-to-end project .
 
-
-
-
-
-
-
-
-
-- 16- load a data .
+- 17- 
 
 
