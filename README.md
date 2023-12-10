@@ -126,4 +126,7 @@ project)
       - API Specification: For APIs, a schema.yaml file could be used to describe the API's structure .
       - Data Interchange Formats: In contexts where data is exchanged between different systems, a schema.
 - 21- C- update params.yaml : Just write a something in this phase like : key : val just fill a page .   
-- 22- D- update the entity : 
+- 22- D- update the entity :  add code in "config.yaml" as a data_ingestion and then add code in "01_data_ingestion.ipynb".
+- 23- Go to "constants" folder and inside in '__init__.py' write a code "CONFIG_FILE_PATH & PARAMS_FILE_PATH & SCHEMA_FILE_PATH ".
+- 24- Continue coding in "01_data_ingestion.ipynb" add a code " from mlProject.constants import * ".
+- 25-

@@ -7,7 +7,7 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
-from mlProject import logger
+from MachineLearning_2023 import logger
 
 # Exception handling for empty or invalid YAML files
 @ensure_annotations
@@ -67,6 +67,7 @@ def save_json(path: Path, data: dict):
 
 
 
+
 # Exception handling for loading JSON files
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
@@ -86,6 +87,7 @@ def load_json(path: Path) -> ConfigBox:
     except Exception as e:
         logger.error(f"Failed to load json file from: {path} with error: {e}")
         return None
+
 
 # Saves any serializable data as a binary file
 @ensure_annotations
@@ -117,6 +119,7 @@ def load_bin(path: Path) -> Any:
     except Exception as e:
         logger.error(f"Failed to load binary file from: {path} with error: {e}")
         return None
+
 
 
 # Exception handling for getting file size

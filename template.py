@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(m
 
 project_name = 'MachineLearning_2023'
 
-project_name = 'mlProject'
+
 
 
 # list of files to be created
