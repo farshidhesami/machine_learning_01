@@ -22,4 +22,4 @@ imbalanced-learn
 opencv-python
 plotly
 sqlalchemy
--e .
+-e .            # The `.` refers to the current directory, which should contain a `setup.py` file . 
