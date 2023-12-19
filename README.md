@@ -129,4 +129,6 @@ project)
 - 22- D- update the entity :  add code in "config.yaml" as a data_ingestion and then add code in "01_data_ingestion.ipynb".
 - 23- Go to "constants" folder and inside in '__init__.py' write a code "CONFIG_FILE_PATH & PARAMS_FILE_PATH & SCHEMA_FILE_PATH ".
 - 24- Continue coding in "01_data_ingestion.ipynb" add a code " from mlProject.constants import * ".
-- 25-
+      - * means read all code in constants/__init__.py.
+- 25- Continue coding in "01_data_ingestion.ipynb" add a code " class ConfigurationManager " and " DataIngestionConfig".
+- 26- 
