@@ -130,5 +130,29 @@ project)
 - 23- Go to "constants" folder and inside in '__init__.py' write a code "CONFIG_FILE_PATH & PARAMS_FILE_PATH & SCHEMA_FILE_PATH ".
 - 24- Continue coding in "01_data_ingestion.ipynb" add a code " from mlProject.constants import * ".
       - * means read all code in constants/__init__.py.
-- 25- Continue coding in "01_data_ingestion.ipynb" add a code " class ConfigurationManager " and " DataIngestionConfig".
-- 26- 
+- 25- Continue coding in "01_data_ingestion.ipynb" update " class ConfigurationManager " and " DataIngestionConfig".
+- 26- Continue coding in "01_data_ingestion.ipynb" update "components" and "pipeline".
+- 17- See artifacts folder and we have a "data_ingestion and data.zip and winequality-red.csv"
+
+- Note Book file finished .
+
+- once again see : 
+    - update config.yaml
+    - update schema.yaml
+    - update params.yaml
+    - update the entity
+    - update the configuration manager in src config
+    - update the components
+    - update the pipeline
+    - update the main.py
+    - update the app.py
+
+- 18- Go to the entity folder "config_entity.py" and add a code .  (from 01_data_ingestion.ipynb)
+- 19- Go to the "01_data_ingestion.ipynb" and copy code from configuration manager and class ConfigurationManager into the  "src/config/configurations.py".
+- 20- Go to the components and create a "data_ingestion.py" and copy components code .
+- 21- Go to update a pipeline,Create a "stage_01_data_ingestion.py" in pipeline folder and add code from 
+"01_data_ingestion.ipynb" for complete a pipeline .
+- 22- Go to "main.py" and Importing the DataIngestionTrainingPipeline class from the stage_01_data_ingestion.py file.
+- Note : for test it delete "logs and artifacts" run a command : "python main.py"
+- Note (Git add) : add a "artifacts/* " in file, it will instruct Git to ignore all files and directories that match the pattern artifacts/ .
+- 23- 
