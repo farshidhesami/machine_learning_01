@@ -111,6 +111,7 @@ project)
 - 16- The purpose of add a code in Expriement.ipynb is to show a End-To-End project and how to create any pipeline and prediction pipeline and how to combine a 
       end-to-end project .
 
+- Data ingestion :
 - 17- How to see a dataset in URL ?
 - 18- Inside a research folder add other folder "01_data_ingestion.ipynb" .
 - 19- "A- update config.yaml", Go to "config.yaml" and add a code as a "artifacts_root" and "data_ingestion" .
@@ -148,11 +149,47 @@ project)
     - update the app.py
 
 - 18- Go to the entity folder "config_entity.py" and add a code .  (from 01_data_ingestion.ipynb)
-- 19- Go to the "01_data_ingestion.ipynb" and copy code from configuration manager and class ConfigurationManager into the  "src/config/configurations.py".
+- 19- Go to the research/"01_data_ingestion.ipynb" and copy code from configuration manager and class ConfigurationManager into the  "src/config/configurations.py".
 - 20- Go to the components and create a "data_ingestion.py" and copy components code .
 - 21- Go to update a pipeline,Create a "stage_01_data_ingestion.py" in pipeline folder and add code from 
 "01_data_ingestion.ipynb" for complete a pipeline .
 - 22- Go to "main.py" and Importing the DataIngestionTrainingPipeline class from the stage_01_data_ingestion.py file.
 - Note : for test it delete "logs and artifacts" run a command : "python main.py"
 - Note (Git add) : add a "artifacts/* " in file, it will instruct Git to ignore all files and directories that match the pattern artifacts/ .
-- 23- 
+
+- Data validation :
+- 23- Create in research/02_data_validation.ipynb and add code .
+- once again update all step  : 
+    - update config.yaml
+    - update schema.yaml
+    - update params.yaml
+    - update the entity
+    - update the configuration manager in src config
+    - update the components
+    - update the pipeline
+    - update the main.py
+    - update the app.py
+
+- 24- first update config.yaml go to config.yaml and add a code .
+- 25- Add a code in "schema.yaml" .
+
+    - Note:A schema.yaml file in a machine learning project defines the structure and data types of dataset. Ensuring that the data used in your ML project is properly structured, validated, and consistent, which is fundamental for building reliable and robust machine learning models.
+    - Define Data Structure
+    - Data Type Validation
+    - Facilitate Data Loading and Processing
+    - Enforce Consistency
+    - Integration with ML Tools
+    - Documentation
+    - Error Handling and Debugging
+    - Supports Feature Engineering
+
+- 26- Go to 02_data_validation.ipynb and add a code from "Experiment.ipynb"
+- 27- update the entity and configuration manager and update the pipeline then run it and check "artifacts/data_validation" ---> after run all "schema.yaml" line check with "Data columns" <---
+- Note : Lets update a "SRC" :
+- 28- we updated all "config.yaml and schema.yaml updated and params.yaml" . 
+- 29- update entity with src/MachineLearning_2023/entity/config_entity.
+- 30- update configuration manager with src/MachineLearning_2023/config/configuration.py
+- 31- update components with create a "data_validation.py" src/MachineLearning_2023/components/data_validation.py. 
+- 32- update the pipeline with create a "stage_02_data_validation.py" 
+- 33- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
+- 34- Run a code in GitBash-----> python main.py------> see artifacts folder.
