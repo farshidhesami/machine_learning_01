@@ -1,19 +1,5 @@
 # End-to-end-ML-Project
 
-## Workflows :
-
-- A- update config.yaml
-- B- update schema.yaml (necessary here because used for data validation component,means that the schema defined in this file is used to check the validity of data in our
-project)    
-- C- update params.yaml (necessary here because this is regression model and This file is likely used to define parameters for a regression model in our project, Normally used in an elastic model, an ElasticNet regression model or similar ).
-- D- update the entity
-- E- update the configuration manager in src config
-- F- update the components
-- G- update the pipeline (refers to updating a data processing or machine learning pipeline)
-- H- update the main.py
-- I- update the app.py
-
-
 - 1- Create a template.py .( Run a "python template.py )
 - 2- Create a requirements.txt .
 - 3- Create a setup.py (Git Bash)
@@ -21,7 +7,8 @@ project)
 - 5- Pip install -r requirements.txt .(Git Bash) 
 - 6- Add code in src/MachineLearning_2023/__ init__.py(sets up a logger for a Python package)
 - 7- Add code in src/MachineLearning_2023/__ init__.py(In machine learning project where logging can be crucial for debugging and tracking the execution of your code).
-- 8- Add a code in main.py for make a logs folder and running_logs.log -----> Custom logging (2023-11-30 13:46:48,356: INFO: main: Welcome to our custom logging).
+- 8- Add a code in main.py for make a logs folder and running_logs.log (from MachineLearning_2023 import logger) 
+     (Gitbash-------> python main.py )
 
 - 9- Add code in src/MachineLearning_2023/utils/common.py .
   - read_yaml Function : 
@@ -43,6 +30,22 @@ project)
      - Use of ConfigBox from the box library for handling configurations is a good choice for its simplicity and dot-access to dictionary keys .
 
 - 10- Add some python code mention in research/trials.ipynb(ConfigBox` class and ensure_annotations training).
+
+## Workflows :
+
+- A- update config.yaml
+- B- update schema.yaml (necessary here because used for data validation component,means that the schema defined in this file is used to check the validity of data in our
+project)    
+- C- update params.yaml (necessary here because this is regression model and This file is likely used to define parameters for a regression model in our project, Normally used in an elastic model, an ElasticNet regression model or similar ).
+- D- update the entity
+- E- update the configuration manager in src config
+- F- update the components
+- G- update the pipeline (refers to updating a data processing or machine learning pipeline)
+- H- update the main.py
+- I- update the app.py
+
+- Note : Add a "winequality-red.csv" into the data folder . and also uploaded as zip file in "Branching-tutorial" github. 
+     - https://github.com/farshidhesami/Branching-tutorial/blob/master/winequality-red.zip
 
 - 11- Create a "Expriement.ipynb" : is likely a Jupyter notebook file used in the context of a Machine Learning (ML) project,use for :
      - Loading and preprocessing data.
@@ -108,10 +111,12 @@ project)
    - R-squared (R2) : 
       - This is a statistical measure that represents the goodness of fit of a regression model. A higher R-squared indicates a better fit for the model.
 
-- 16- The purpose of add a code in Expriement.ipynb is to show a End-To-End project and how to create any pipeline and prediction pipeline and how to combine a 
-      end-to-end project .
+- 16- The purpose of add a code in Expriement.ipynb is to show a End-To-End project and how to create any pipeline and prediction pipeline and how to combine a end-to-end project .
 
-- Data ingestion :
+- Note : Inside a research folder we create a "01_data_ingestion.ipynb" its first stage .
+
+### Stage 01 Data ingestion :
+
 - 17- How to see a dataset in URL ?
 - 18- Inside a research folder add other folder "01_data_ingestion.ipynb" .
 - 19- "A- update config.yaml", Go to "config.yaml" and add a code as a "artifacts_root" and "data_ingestion" .
@@ -135,7 +140,7 @@ project)
 - 26- Continue coding in "01_data_ingestion.ipynb" update "components" and "pipeline".
 - 17- See artifacts folder and we have a "data_ingestion and data.zip and winequality-red.csv"
 
-- Note Book file finished .
+- "NoteBook file finished" .
 
 - once again see : 
     - update config.yaml
@@ -154,10 +159,13 @@ project)
 - 21- Go to update a pipeline,Create a "stage_01_data_ingestion.py" in pipeline folder and add code from 
 "01_data_ingestion.ipynb" for complete a pipeline .
 - 22- Go to "main.py" and Importing the DataIngestionTrainingPipeline class from the stage_01_data_ingestion.py file.
+- Note : By main.py run a "pipeline" and test it possible .
 - Note : for test it delete "logs and artifacts" run a command : "python main.py"
-- Note (Git add) : add a "artifacts/* " in file, it will instruct Git to ignore all files and directories that match the pattern artifacts/ .
 
-- Data validation :
+- Note (in .gitignore) : add a "artifacts/* " in file, it will instruct Git to ignore all files and directories that match the pattern artifacts/ .
+
+### Stage 02 Data validation :
+
 - 23- Create in research/02_data_validation.ipynb and add code .
 - once again update all step  : 
     - update config.yaml
@@ -172,6 +180,7 @@ project)
 
 - 24- first update config.yaml go to config.yaml and add a code .
 - 25- Add a code in "schema.yaml" .
+    - Note : Using a `schema.yaml` file like yours is a best practice in data science and machine learning, helping to maintain data integrity and streamline the model development and deployment process.Since `quality` is an integer, this could be a classification or a regression problem depending on the nature of the `quality` variable (discrete classes or a continuous range).
 
     - Note:A schema.yaml file in a machine learning project defines the structure and data types of dataset. Ensuring that the data used in your ML project is properly structured, validated, and consistent, which is fundamental for building reliable and robust machine learning models.
     - Define Data Structure
@@ -184,12 +193,18 @@ project)
     - Supports Feature Engineering
 
 - 26- Go to 02_data_validation.ipynb and add a code from "Experiment.ipynb"
-- 27- update the entity and configuration manager and update the pipeline then run it and check "artifacts/data_validation" ---> after run all "schema.yaml" line check with "Data columns" <---
+
 - Note : Lets update a "SRC" :
-- 28- we updated all "config.yaml and schema.yaml updated and params.yaml" . 
-- 29- update entity with src/MachineLearning_2023/entity/config_entity.
-- 30- update configuration manager with src/MachineLearning_2023/config/configuration.py
-- 31- update components with create a "data_validation.py" src/MachineLearning_2023/components/data_validation.py. 
-- 32- update the pipeline with create a "stage_02_data_validation.py" 
-- 33- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
-- 34- Run a code in GitBash-----> python main.py------> see artifacts folder.
+- 27- we updated all "config.yaml and schema.yaml updated and params.yaml" . 
+- 28- update entity with src/MachineLearning_2023/entity/config_entity.
+- 29- update configuration manager with src/MachineLearning_2023/config/configuration.py
+- 30- update components with create a "data_validation.py" src/MachineLearning_2023/components/data_validation.py. 
+- 31- update the pipeline with create a "stage_02_data_validation.py" 
+- 32- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
+- 33- Run a code in GitBash-----> python main.py------> see artifacts folder.
+
+### Data transformation : 
+- 34- create a "03_data_transformation.ipynb" in research folder.
+- 35- first update config.yaml
+- 36- 
+ 
