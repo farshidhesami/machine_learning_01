@@ -203,7 +203,7 @@ project)
 - 32- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
 - 33- Run a code in GitBash-----> python main.py------> see artifacts folder.
 
-### Data transformation : 
+### Stage 03 Data transformation : 
 - 34- create a "03_data_transformation.ipynb" in research folder.
 
 - once again update all step  : 
@@ -226,10 +226,46 @@ project)
   39- inside " 03_data_transformation.ipynb " update the components.
   40- inside " 03_data_transformation.ipynb " Update the pipeline.
   41- execute code.(inside a artifacts/data_transformation two data generated "test.csv" and "train.csv").
+
   42- update entity with src/MachineLearning_2023/entity/config_entity.
   43- update configuration manager with src/MachineLearning_2023/config/configuration.py
   44- update components with create a "data_transformation.py" src/MachineLearning_2023/components/data_transformation.py. 
   45- update the pipeline with create a "stage_03_data_transformation.py" .
   46- Add code in "main.py" for "data_transformation.py" and then test it and before that delete a artifacts folder.
   47-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+
+### Stage 04 Model Trainer : 
+
+48- first update config.yaml.
+49- add code in "params.yaml".
+  - Note : The `params.yaml` file you've described is used to configure parameters for an 
+    "ElasticNet model".   
+
+    - once again update all step  : 
+    - update config.yaml
+    - update schema.yaml
+    - update params.yaml
+    - update the entity
+    - update the configuration manager in src config
+    - update the components
+    - update the pipeline
+    - update the main.py
+    - update the app.py
+
+50- inside " 04_model_trainer.ipynb " initials entity    
+51- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
+52- inside " 04_model_trainer.ipynb " Import libraries .
+53- inside " 04_model_trainer.ipynb " update the components.
+54- inside " 04_model_trainer.ipynb " Update the pipeline.
+55- execute code. (inside a artifacts/model_trainer/model.joblib created ).
+
+56- update entity with src/MachineLearning_2023/entity/config_entity.
+57- update configuration manager with src/MachineLearning_2023/config/configuration.py
+58- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
+59- update the pipeline with create a "stage_04_model_trainer.py".
+60- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
+61-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+
+
+### Stage 05 Model evaluation :
 
