@@ -2,7 +2,8 @@ from MachineLearning_2023.constants import *
 from MachineLearning_2023.utils.common import read_yaml, create_directories
 
 from MachineLearning_2023.entity.config_entity import (DataIngestionConfig,
-                                                       DataValidationConfig,)
+                                                       DataValidationConfig,
+                                                       DataTransformationConfig)
 
 # Configuration Manager class to read the configuration files and return the configuration objects (data ingestion config)
 class ConfigurationManager:
@@ -17,7 +18,10 @@ class ConfigurationManager:
         self.schema = read_yaml(schema_filepath)
 
         create_directories([self.config.artifacts_root])
-        
+
+
+
+
 # get_data_ingestion_config() method to return the data ingestion config object
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         config = self.config.data_ingestion
@@ -35,6 +39,7 @@ class ConfigurationManager:
         return data_ingestion_config
     
     
+    # get_data_validation_config() method to return the data validation config object
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
         schema = self.schema.COLUMNS
@@ -49,3 +54,17 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+
+
+    # get_data_Transformation_config() method to return the data Transformation config .
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+        )
+
+        return data_transformation_config

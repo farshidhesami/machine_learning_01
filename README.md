@@ -205,6 +205,31 @@ project)
 
 ### Data transformation : 
 - 34- create a "03_data_transformation.ipynb" in research folder.
+
+- once again update all step  : 
+    - update config.yaml
+    - update schema.yaml
+    - update params.yaml
+    - update the entity
+    - update the configuration manager in src config
+    - update the components
+    - update the pipeline
+    - update the main.py
+    - update the app.py
+
 - 35- first update config.yaml
-- 36- 
- 
+- 36- inside " 03_data_transformation.ipynb " initials entity 
+  37- inside " 03_data_transformation.ipynb " update the configuration manager class and "DataTransformationConfig" .
+    - Note: data_transformation related to "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)" inside "Experiment.ipynb".
+
+  38- inside " 03_data_transformation.ipynb " Import libraries .
+  39- inside " 03_data_transformation.ipynb " update the components.
+  40- inside " 03_data_transformation.ipynb " Update the pipeline.
+  41- execute code.(inside a artifacts/data_transformation two data generated "test.csv" and "train.csv").
+  42- update entity with src/MachineLearning_2023/entity/config_entity.
+  43- update configuration manager with src/MachineLearning_2023/config/configuration.py
+  44- update components with create a "data_transformation.py" src/MachineLearning_2023/components/data_transformation.py. 
+  45- update the pipeline with create a "stage_03_data_transformation.py" .
+  46- Add code in "main.py" for "data_transformation.py" and then test it and before that delete a artifacts folder.
+  47-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+
