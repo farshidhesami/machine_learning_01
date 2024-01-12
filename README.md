@@ -237,7 +237,7 @@ project)
 ### Stage 04 Model Trainer : 
 
 48- first update config.yaml.
-49- add code in "params.yaml".
+49- add code in "params.yaml". (This Code related to Elastic Net Regression.Add a "params.yaml" helps to save time to change a parameter in  "components" )
   - Note : The `params.yaml` file you've described is used to configure parameters for an 
     "ElasticNet model".   
 
@@ -267,5 +267,31 @@ project)
 61-Run a code in GitBash-----> python main.py------> see artifacts folder. 
 
 
-### Stage 05 Model evaluation :
+### Stage 05 Model evaluation : 
 
+62- Create a ( 05_model_evaluation.ipynb ) and then first update config.yaml.
+63- Step by step :
+    - once again update all step  : 
+    - update config.yaml
+    - update schema.yaml
+    - update params.yaml
+    - update the entity
+    - update the configuration manager in src config
+    - update the components
+    - update the pipeline
+    - update the main.py
+    - update the app.py
+
+64- inside " 04_model_trainer.ipynb " initials entity    
+65- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
+66- inside " 04_model_trainer.ipynb " Import libraries .
+67- inside " 04_model_trainer.ipynb " update the components.
+68- inside " 04_model_trainer.ipynb " Update the pipeline.
+69- execute code. (inside a artifacts/model_trainer/model.joblib created ).
+
+70- update entity with src/MachineLearning_2023/entity/config_entity.
+71- update configuration manager with src/MachineLearning_2023/config/configuration.py
+72- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
+73- update the pipeline with create a "stage_04_model_trainer.py".
+74- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
+75-Run a code in GitBash-----> python main.py------> see artifacts folder. 
