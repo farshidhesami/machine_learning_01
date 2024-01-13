@@ -271,16 +271,20 @@ project)
 
 62- Create a ( 05_model_evaluation.ipynb ) and then first update config.yaml.
 63- Step by step :
-    - once again update all step  : 
-    - update config.yaml
-    - update schema.yaml
-    - update params.yaml
-    - update the entity
-    - update the configuration manager in src config
-    - update the components
-    - update the pipeline
-    - update the main.py
-    - update the app.py
+   - once again update all step  : 
+   - update config.yaml
+   - update schema.yaml
+   - update params.yaml
+   - update the entity
+   - update the configuration manager in src config
+   - update the components
+   - update the pipeline
+   - update the main.py
+   - update the app.py
+
+   - Note in 05_model_evaluation.ipynb : 
+     - joblib is a Python library that provides tools for saving and loading Python objects efficiently.
+     - urllib.parse is a Python module that provides functions for parsing URLs (Uniform Resource Locators).    
 
 64- inside " 04_model_trainer.ipynb " initials entity    
 65- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
