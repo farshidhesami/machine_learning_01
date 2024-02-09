@@ -10,9 +10,9 @@ with open('requirements.txt') as f:
 
 __version__ = "0.0.0"  
 
-REPO_NAME = "machine_learning_01"
-AUTHOR_USER_NAME = "farshidhesami"
-SRC_REPO = "MachineLearning_2023"
+REPO_NAME = "machine_learning_01"     # This is the name of the repository on Github
+AUTHOR_USER_NAME = "farshidhesami"    # This is the name of the user on Github
+SRC_REPO = "MachineLearning_2023"     # This is the name of the src folder in the VScode explorer directory 
 AUTHOR_EMAIL = "farshidhesami@gmail.com"
 
 # Define package metadata and configuration

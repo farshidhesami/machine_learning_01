@@ -1,17 +1,17 @@
-from MachineLearning_2023.config.configurations import ConfigurationManager
-from MachineLearning_2023.components.data_ingestion import DataIngestion
-from MachineLearning_2023 import logger
+from MachineLearning_2023.config.configurations import ConfigurationManager     # this is the config manager
+from MachineLearning_2023.components.data_ingestion import DataIngestion        # This is the data ingestion class
+from MachineLearning_2023 import logger                                         # This is the logger
 
 # Get the config manager
 STAGE_NAME = "Data Ingestion stage"
 
 
-class DataIngestionTrainingPipeline:
+class DataIngestionTrainingPipeline:           # This is the data ingestion pipeline class
     def __init__(self):
         pass
 
-# Get the logger for the data ingestion stage
-    def main(self):
+# Get the logger for the data ingestion stage  
+    def main(self):                            # Copy from 01_data_ingestion.ipynb pipeline class 
         config = ConfigurationManager()
         data_ingestion_config = config.get_data_ingestion_config()
         data_ingestion = DataIngestion(config=data_ingestion_config)

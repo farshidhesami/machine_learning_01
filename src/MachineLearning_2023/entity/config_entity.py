@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True)             # This code copy from 01_data_ingestion.py
 class DataIngestionConfig:
     root_dir: Path
     source_URL: str

@@ -7,6 +7,7 @@ from MachineLearning_2023.entity.config_entity import (DataIngestionConfig,
                                                        ModelTrainerConfig)
 
 # Configuration Manager class to read the configuration files and return the configuration objects (data ingestion config)
+# The ConfigurationManager class will have the following methods:
 class ConfigurationManager:
     def __init__(
         self,

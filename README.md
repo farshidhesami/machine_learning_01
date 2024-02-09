@@ -5,8 +5,15 @@
 - 3- Create a setup.py (Git Bash)
 - 4- use a "pip freeze" command for listing all the Python packages installed in the system .(Git Bash) 
 - 5- Pip install -r requirements.txt .(Git Bash) 
+
 - 6- Add code in src/MachineLearning_2023/__ init__.py(sets up a logger for a Python package)
-- 7- Add code in src/MachineLearning_2023/__ init__.py(In machine learning project where logging can be crucial for debugging and tracking the execution of your code).
+   - Note 01 : Without an __init__.py file, Python won't recognize the directory as a package.
+   - Note 02 : In my case, the __init__.py file is setting up a logger that can be used throughout the
+     rest of the package . 
+   - Note 03 : (In machine learning project where logging can be crucial for debugging and tracking the execution of your code).
+
+- 7- Add code in src/MachineLearning_2023/__ init__.py .
+
 - 8- Add a code in main.py for make a logs folder and running_logs.log (from MachineLearning_2023 import logger) 
      (Gitbash-------> python main.py )
 
@@ -119,8 +126,10 @@ project)
 
 - 17- How to see a dataset in URL ?
 - 18- Inside a research folder add other folder "01_data_ingestion.ipynb" .
-- 19- "A- update config.yaml", Go to "config.yaml" and add a code as a "artifacts_root" and "data_ingestion" .
-- 20- "B- update schema.yaml", Go to "schema.yaml" ,Just write a something in this phase like : key : val just fill a page .
+- 19- "A"- update config.yaml", Go to "config.yaml" and add a code as a "artifacts_root" and "data_ingestion" .
+
+- 20- "B"- update schema.yaml", Go to "schema.yaml" ,Just write a something in this phase like : key : val just fill a page .
+
       - A schema.yaml is a YAML (YAML Ain't Markup Language) file that defines a schema for data structures or configurations. 
       - YAML is a human-readable data serialization format commonly used for configuration files, but it can also be used for other purposes like data storage or 
         inter-process communication .
@@ -131,14 +140,21 @@ project)
       - Database Schema Definition: In the context of databases, a schema.
       - API Specification: For APIs, a schema.yaml file could be used to describe the API's structure .
       - Data Interchange Formats: In contexts where data is exchanged between different systems, a schema.
-- 21- C- update params.yaml : Just write a something in this phase like : key : val just fill a page .   
-- 22- D- update the entity :  add code in "config.yaml" as a data_ingestion and then add code in "01_data_ingestion.ipynb".
+
+- 21- "C"- update params.yaml : Just write a something in this phase like : key : val just fill a page . 
+
+- 22- "D"- update the entity :  add code in "config.yaml" as a data_ingestion and then add code in "01_data_ingestion.ipynb".
+
 - 23- Go to "constants" folder and inside in '__init__.py' write a code "CONFIG_FILE_PATH & PARAMS_FILE_PATH & SCHEMA_FILE_PATH ".
+
 - 24- Continue coding in "01_data_ingestion.ipynb" add a code " from mlProject.constants import * ".
       - * means read all code in constants/__init__.py.
+
 - 25- Continue coding in "01_data_ingestion.ipynb" update " class ConfigurationManager " and " DataIngestionConfig".
+
 - 26- Continue coding in "01_data_ingestion.ipynb" update "components" and "pipeline".
-- 17- See artifacts folder and we have a "data_ingestion and data.zip and winequality-red.csv"
+
+- 27- See artifacts folder and we have a "data_ingestion and data.zip and winequality-red.csv"
 
 - "NoteBook file finished" .
 
@@ -153,20 +169,26 @@ project)
     - update the main.py
     - update the app.py
 
-- 18- Go to the entity folder "config_entity.py" and add a code .  (from 01_data_ingestion.ipynb)
-- 19- Go to the research/"01_data_ingestion.ipynb" and copy code from configuration manager and class ConfigurationManager into the  "src/config/configurations.py".
-- 20- Go to the components and create a "data_ingestion.py" and copy components code .
-- 21- Go to update a pipeline,Create a "stage_01_data_ingestion.py" in pipeline folder and add code from 
+- 28- Go to the entity folder "config_entity.py" and add a code .  (from 01_data_ingestion.ipynb)
+
+- 29- Go to the research/"01_data_ingestion.ipynb" and copy code from configuration manager and class ConfigurationManager into the  "src/config/configurations.py".
+
+- 30- Go to the components and create a "data_ingestion.py" and copy components code .
+
+- 31- Go to update a pipeline,Create a "stage_01_data_ingestion.py" in pipeline folder and add code from 
 "01_data_ingestion.ipynb" for complete a pipeline .
-- 22- Go to "main.py" and Importing the DataIngestionTrainingPipeline class from the stage_01_data_ingestion.py file.
+
+- 32- Go to "main.py" and Importing the DataIngestionTrainingPipeline class from the stage_01_data_ingestion.py file. 
+
 - Note : By main.py run a "pipeline" and test it possible .
+
 - Note : for test it delete "logs and artifacts" run a command : "python main.py"
 
 - Note (in .gitignore) : add a "artifacts/* " in file, it will instruct Git to ignore all files and directories that match the pattern artifacts/ .
 
 ### Stage 02 Data validation :
 
-- 23- Create in research/02_data_validation.ipynb and add code .
+- 33- Create in research/02_data_validation.ipynb and add code .
 - once again update all step  : 
     - update config.yaml
     - update schema.yaml
@@ -178,8 +200,8 @@ project)
     - update the main.py
     - update the app.py
 
-- 24- first update config.yaml go to config.yaml and add a code .
-- 25- Add a code in "schema.yaml" .
+- 34- first update config.yaml go to config.yaml and add a code .
+- 35- Add a code in "schema.yaml" .
     - Note : Using a `schema.yaml` file like yours is a best practice in data science and machine learning, helping to maintain data integrity and streamline the model development and deployment process.Since `quality` is an integer, this could be a classification or a regression problem depending on the nature of the `quality` variable (discrete classes or a continuous range).
 
     - Note:A schema.yaml file in a machine learning project defines the structure and data types of dataset. Ensuring that the data used in your ML project is properly structured, validated, and consistent, which is fundamental for building reliable and robust machine learning models.
@@ -192,19 +214,19 @@ project)
     - Error Handling and Debugging
     - Supports Feature Engineering
 
-- 26- Go to 02_data_validation.ipynb and add a code from "Experiment.ipynb"
+- 36- Go to 02_data_validation.ipynb and add a code from "Experiment.ipynb"
 
 - Note : Lets update a "SRC" :
-- 27- we updated all "config.yaml and schema.yaml updated and params.yaml" . 
-- 28- update entity with src/MachineLearning_2023/entity/config_entity.
-- 29- update configuration manager with src/MachineLearning_2023/config/configuration.py
-- 30- update components with create a "data_validation.py" src/MachineLearning_2023/components/data_validation.py. 
-- 31- update the pipeline with create a "stage_02_data_validation.py" 
-- 32- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
-- 33- Run a code in GitBash-----> python main.py------> see artifacts folder.
+- 37- we updated all "config.yaml and schema.yaml updated and params.yaml" . 
+- 38- update entity with src/MachineLearning_2023/entity/config_entity.
+- 39- update configuration manager with src/MachineLearning_2023/config/configuration.py
+- 40- update components with create a "data_validation.py" src/MachineLearning_2023/components/data_validation.py. 
+- 41- update the pipeline with create a "stage_02_data_validation.py" 
+- 42- Add code in "main.py" for "Data Validation stage" and then test it and before that delete a artifacts folder.
+- 43- Run a code in GitBash-----> python main.py------> see artifacts folder.
 
 ### Stage 03 Data transformation : 
-- 34- create a "03_data_transformation.ipynb" in research folder.
+- 44- create a "03_data_transformation.ipynb" in research folder.
 
 - once again update all step  : 
     - update config.yaml
@@ -217,27 +239,27 @@ project)
     - update the main.py
     - update the app.py
 
-- 35- first update config.yaml
-- 36- inside " 03_data_transformation.ipynb " initials entity 
-  37- inside " 03_data_transformation.ipynb " update the configuration manager class and "DataTransformationConfig" .
+- 45- first update config.yaml
+- 46- inside " 03_data_transformation.ipynb " initials entity 
+  47- inside " 03_data_transformation.ipynb " update the configuration manager class and "DataTransformationConfig" .
     - Note: data_transformation related to "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)" inside "Experiment.ipynb".
 
-  38- inside " 03_data_transformation.ipynb " Import libraries .
-  39- inside " 03_data_transformation.ipynb " update the components.
-  40- inside " 03_data_transformation.ipynb " Update the pipeline.
-  41- execute code.(inside a artifacts/data_transformation two data generated "test.csv" and "train.csv").
+  48- inside " 03_data_transformation.ipynb " Import libraries .
+  49- inside " 03_data_transformation.ipynb " update the components.
+  50- inside " 03_data_transformation.ipynb " Update the pipeline.
+  51- execute code.(inside a artifacts/data_transformation two data generated "test.csv" and "train.csv").
 
-  42- update entity with src/MachineLearning_2023/entity/config_entity.
-  43- update configuration manager with src/MachineLearning_2023/config/configuration.py
-  44- update components with create a "data_transformation.py" src/MachineLearning_2023/components/data_transformation.py. 
-  45- update the pipeline with create a "stage_03_data_transformation.py" .
-  46- Add code in "main.py" for "data_transformation.py" and then test it and before that delete a artifacts folder.
-  47-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+  52- update entity with src/MachineLearning_2023/entity/config_entity.
+  53- update configuration manager with src/MachineLearning_2023/config/configuration.py
+  54- update components with create a "data_transformation.py" src/MachineLearning_2023/components/data_transformation.py. 
+  55- update the pipeline with create a "stage_03_data_transformation.py" .
+  56- Add code in "main.py" for "data_transformation.py" and then test it and before that delete a artifacts folder.
+  57-Run a code in GitBash-----> python main.py------> see artifacts folder. 
 
 ### Stage 04 Model Trainer : 
 
-48- first update config.yaml.
-49- add code in "params.yaml". (This Code related to Elastic Net Regression.Add a "params.yaml" helps to save time to change a parameter in  "components" )
+58- first update config.yaml.
+59- add code in "params.yaml". (This Code related to Elastic Net Regression.Add a "params.yaml" helps to save time to change a parameter in  "components" )
   - Note : The `params.yaml` file you've described is used to configure parameters for an 
     "ElasticNet model".   
 
@@ -252,25 +274,25 @@ project)
     - update the main.py
     - update the app.py
 
-50- inside " 04_model_trainer.ipynb " initials entity    
-51- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
-52- inside " 04_model_trainer.ipynb " Import libraries .
-53- inside " 04_model_trainer.ipynb " update the components.
-54- inside " 04_model_trainer.ipynb " Update the pipeline.
-55- execute code. (inside a artifacts/model_trainer/model.joblib created ).
+60- inside " 04_model_trainer.ipynb " initials entity    
+61- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
+62- inside " 04_model_trainer.ipynb " Import libraries .
+63- inside " 04_model_trainer.ipynb " update the components.
+64- inside " 04_model_trainer.ipynb " Update the pipeline.
+65- execute code. (inside a artifacts/model_trainer/model.joblib created ).
 
-56- update entity with src/MachineLearning_2023/entity/config_entity.
-57- update configuration manager with src/MachineLearning_2023/config/configuration.py
-58- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
-59- update the pipeline with create a "stage_04_model_trainer.py".
-60- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
-61-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+66- update entity with src/MachineLearning_2023/entity/config_entity.
+67- update configuration manager with src/MachineLearning_2023/config/configuration.py
+68- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
+69- update the pipeline with create a "stage_04_model_trainer.py".
+70- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
+71-Run a code in GitBash-----> python main.py------> see artifacts folder. 
 
 
 ### Stage 05 Model evaluation : 
 
-62- Create a ( 05_model_evaluation.ipynb ) and then first update config.yaml.
-63- Step by step :
+72- Create a ( 05_model_evaluation.ipynb ) and then first update config.yaml.
+73- Step by step :
    - once again update all step  : 
    - update config.yaml
    - update schema.yaml
@@ -286,16 +308,16 @@ project)
      - joblib is a Python library that provides tools for saving and loading Python objects efficiently.
      - urllib.parse is a Python module that provides functions for parsing URLs (Uniform Resource Locators).    
 
-64- inside " 04_model_trainer.ipynb " initials entity    
-65- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
-66- inside " 04_model_trainer.ipynb " Import libraries .
-67- inside " 04_model_trainer.ipynb " update the components.
-68- inside " 04_model_trainer.ipynb " Update the pipeline.
-69- execute code. (inside a artifacts/model_trainer/model.joblib created ).
+74- inside " 04_model_trainer.ipynb " initials entity    
+75- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
+76- inside " 04_model_trainer.ipynb " Import libraries .
+77- inside " 04_model_trainer.ipynb " update the components.
+78- inside " 04_model_trainer.ipynb " Update the pipeline.
+79- execute code. (inside a artifacts/model_trainer/model.joblib created ).
 
-70- update entity with src/MachineLearning_2023/entity/config_entity.
-71- update configuration manager with src/MachineLearning_2023/config/configuration.py
-72- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
-73- update the pipeline with create a "stage_04_model_trainer.py".
-74- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
-75-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+80- update entity with src/MachineLearning_2023/entity/config_entity.
+81- update configuration manager with src/MachineLearning_2023/config/configuration.py
+82- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
+83- update the pipeline with create a "stage_04_model_trainer.py".
+84- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
+85-Run a code in GitBash-----> python main.py------> see artifacts folder. 
