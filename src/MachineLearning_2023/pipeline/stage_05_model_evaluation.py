@@ -3,18 +3,41 @@ from MachineLearning_2023.components.model_evaluation import ModelEvaluation
 from MachineLearning_2023 import logger
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 STAGE_NAME = "Model evaluation stage"
+
+# Define the model evaluation functions
+def evaluate_logistic_regression(X_train, y_train, X_test, y_test):
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    
+    accuracy = accuracy_score(y_test, y_pred)
+    confusion_mat = confusion_matrix(y_test, y_pred)
+    
+    return accuracy, confusion_mat
+
+def evaluate_extra_trees_classifier(X_train, y_train, X_test, y_test):
+    classifier = ExtraTreesClassifier()
+    classifier.fit(X_train, y_train)
+    y_pred = classifier.predict(X_test)
+    
+    accuracy = accuracy_score(y_test, y_pred)
+    confusion_mat = confusion_matrix(y_test, y_pred)
+    
+    return accuracy, confusion_mat
 
 class ModelEvaluationTrainingPipeline:
     def __init__(self):
         self.config_manager = ConfigurationManager()
-        self.model_evaluation_config = self.config_manager.get_model_evaluation_config()
 
     def main(self):
-        # Initialize ModelEvaluation with configuration
-        model_evaluator = ModelEvaluation(config=self.model_evaluation_config)
-        model_evaluator.save_results()
+        model_evaluation_config = self.config_manager.get_model_evaluation_config()
+        model_evaluation = ModelEvaluation(config=model_evaluation_config)
+        model_evaluation.save_results()
 
         # Load your dataset
         DATA_PATH = 'data/winequality-red.csv'
@@ -27,13 +50,15 @@ class ModelEvaluationTrainingPipeline:
         # Splitting the dataset into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 
-        # Evaluate Logistic Regression and Extra Trees Classifier using ModelEvaluation class
-        # If these methods are defined in ModelEvaluation class, call them like this:
-        # logistic_accuracy, logistic_confusion_mat = model_evaluator.evaluate_logistic_regression(X_train, y_train, X_test, y_test)
-        # et_accuracy, et_confusion_mat = model_evaluator.evaluate_extra_trees_classifier(X_train, y_train, X_test, y_test)
+        # Evaluate Logistic Regression
+        logistic_accuracy, logistic_confusion_mat = evaluate_logistic_regression(X_train, y_train, X_test, y_test)
+        print("Logistic Regression Accuracy:", logistic_accuracy)
+        print("Logistic Regression Confusion Matrix:\n", logistic_confusion_mat)
 
-        # Alternatively, if these methods are not in ModelEvaluation, 
-        # you need to define them in this script or import them if they're defined elsewhere
+        # Evaluate Extra Trees Classifier
+        et_accuracy, et_confusion_mat = evaluate_extra_trees_classifier(X_train, y_train, X_test, y_test)
+        print("Extra Trees Classifier Accuracy:", et_accuracy)
+        print("Extra Trees Classifier Confusion Matrix:\n", et_confusion_mat)
 
 if __name__ == '__main__':
     try:
