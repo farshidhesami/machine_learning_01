@@ -308,11 +308,11 @@ project)
      - joblib is a Python library that provides tools for saving and loading Python objects efficiently.
      - urllib.parse is a Python module that provides functions for parsing URLs (Uniform Resource Locators).    
 
-74- inside " 04_model_trainer.ipynb " initials entity    
-75- inside " 04_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
-76- inside " 04_model_trainer.ipynb " Import libraries .
-77- inside " 04_model_trainer.ipynb " update the components.
-78- inside " 04_model_trainer.ipynb " Update the pipeline.
+74- inside " 05_model_trainer.ipynb " initials entity    
+75- inside " 05_model_trainer.ipynb " update the configuration manager class and "class ConfigurationManager" .
+76- inside " 05_model_trainer.ipynb " Import libraries .
+77- inside " 05_model_trainer.ipynb " update the components.
+78- inside " 05_model_trainer.ipynb " Update the pipeline.
 79- execute code. (inside a artifacts/model_trainer/model.joblib created ).
 
 80- update entity with src/MachineLearning_2023/entity/config_entity.

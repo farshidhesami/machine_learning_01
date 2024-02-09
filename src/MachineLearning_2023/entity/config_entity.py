@@ -11,7 +11,7 @@ class DataIngestionConfig:
     unzip_dir: Path
     
 
-@dataclass(frozen=True)
+@dataclass(frozen=True)              # This code copy from 02_data_validation.py
 class DataValidationConfig:
     root_dir: Path
     STATUS_FILE: str
@@ -20,14 +20,14 @@ class DataValidationConfig:
 
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True)              # This code copy from 03_data_transformation.py
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
 
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True)              # This code copy from 04_data_preprocessing.py
 class ModelTrainerConfig:
     root_dir: Path
     train_data_path: Path
@@ -36,3 +36,17 @@ class ModelTrainerConfig:
     alpha: float
     l1_ratio: float
     target_column: str
+
+
+
+
+@dataclass(frozen=True)               # This code copy from 05_model_evaluation.py
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    all_params: dict
+    metric_file_name: Path
+    target_column: str
+    
+    
