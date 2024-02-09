@@ -318,6 +318,6 @@ project)
 80- update entity with src/MachineLearning_2023/entity/config_entity.
 81- update configuration manager with src/MachineLearning_2023/config/configuration.py
 82- update components with create a "model_trainer.py" src/MachineLearning_2023/components/model_trainer.py. 
-83- update the pipeline with create a "stage_04_model_trainer.py".
+83- update the pipeline with create a "stage_05_model_evaluation.py".
 84- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
 85-Run a code in GitBash-----> python main.py------> see artifacts folder. 
