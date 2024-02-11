@@ -321,3 +321,47 @@ project)
 83- update the pipeline with create a "stage_05_model_evaluation.py".
 84- Add code in "main.py" for "Model Trainer stage" and then test it and before that delete a artifacts folder.
 85-Run a code in GitBash-----> python main.py------> see artifacts folder. 
+
+
+### Prediction :
+
+86-Create a file in src/MachineLearning_2023/prediction.py (we need a load a model and then predict a model) . add a code .
+  - Note : joblib is a Python library often used in machine learning for saving and loading models, 
+           which is especially useful when models are large or take a long time to train. 
+
+87-Create code in prediction.py for "predict" and "load_model" and then test it in main.py .
+   - Note : The `predict` function in the `prediction.py` file should take a list of input features and return a prediction. 
+             The `load_model` function should load the trained model from the artifacts folder.
+88-Create code in app.py and add a flask code for prediction and then test it in main.py .
+
+89-Create code in templates/index.html and add a html code for prediction and then test it in main.py .
+  - Note : for find a more templates go to "https://getbootstrap.com/docs/5.3/examples/" and then copy a code and paste it in "index.html" ..
+
+90-We Add a static folder in "template.py" the reason of static folder :
+  - Flask automatically serves files from the `static` folder in the root of the Flask application. This is 
+    the designated place to store static files like CSS, JavaScript, images, and other assets that do not change during the application's operation.
+
+    The relationship between Flask and the static folder is therefore one of convention and convenience, allowing developers to easily integrate and serve static content within their web applications. 
+
+
+  - The structure of the static folder  outlined is a common setup for web projects where assets are 
+    organized by type:
+    
+    - 1. `assets` Folder: This typically contains all the media files.
+       - `img`: A dedicated folder for images used in the website.
+       - `favicon.ico`: The website's favicon, which appears in browser tabs and bookmarks.
+    - 2. `css` Folder: Contains Cascading Style Sheets (CSS) files that define the visual appearance of your 
+               HTML content.
+       - `styles.css`: Main stylesheet file that includes styling rules for your web pages.
+    - 3. `css2` Folder: It seems like you've chosen to separate some of your CSS, possibly to differentiate 
+                between general styles and more specific ones like fonts.
+       - `nunito-font.css`: Likely includes @font-face rules for including the Nunito font in your web pages.
+       - `style.css`: Could be an additional stylesheet with more specific or overriding styles.
+    - 4. `js` Folder: Contains JavaScript (JS) files that add interactivity to your web pages.
+       - `scripts.js`: A JavaScript file that may contain functions for dynamic behavior on the website, such 
+                       as handling user input, manipulating the Document Object Model (DOM), sending requests to a server, etc.
+
+- This organized approach allows you to maintain a clean project structure, where static resources are easily accessible and manageable. It also helps in referencing these resources within your HTML and server-side code, as they will typically have a predictable path relative to the root of your website.
+
+91- Run a app.py in gitBash terminal and write a "python app.py" and then go to "http://127.0.0.1:8080/" and see a prediction page .
+
