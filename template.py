@@ -44,7 +44,7 @@ list_of_files = [
     "params.yaml",
     "schema.yaml",
     "main.py",
-    "app.py",
+    "application.py",
     "requirements.txt",
     "setup.py",
     "research/01_data_ingestion.ipynb",

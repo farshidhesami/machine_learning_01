@@ -22,4 +22,9 @@ imbalanced-learn
 opencv-python
 plotly
 sqlalchemy
--e .            # The `.` refers to the current directory, which should contain a `setup.py` file . 
+gunicorn          # Added for WSGI server
+python-dotenv     # Added for environment variables management
+Flask-Talisman    # Added for security headers
+Flask-SeaSurf     # Added for CSRF protection
+-e .              # The `.` refers to the current directory, which should contain a `setup.py` file . 
+
