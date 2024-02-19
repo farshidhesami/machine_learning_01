@@ -3,6 +3,7 @@ import subprocess
 import numpy as np
 import pandas as pd
 from MachineLearning_2023.pipeline.prediction import PredictionPipeline 
+import os  # Import the os module
 
 app = Flask(__name__)
 
@@ -47,8 +48,6 @@ def predict():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
-
-
 
 
 
