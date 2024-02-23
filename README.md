@@ -365,30 +365,47 @@ project)
 
 91- Run a app.py in gitBash terminal and write a "python app.py" and then go to "http://127.0.0.1:8080/" and see a prediction page .
 
-   - Note for `Junior code` : 
-      - In the `/train` route of our Flask application, the variable `ret` is utilized to capture the return value of the system call initiated by `os.system("python main.py")`. 
+   - Note :
 
-      - This command triggers the model training process. 
-         - The return value, stored in `ret`, serves as an indicator of the execution status of the training script:
-           - A return value of `0` signifies that the training script executed successfully without errors, indicating a successful model training session.
-           - Any non-zero return value indicates that the training script encountered an error during execution, signaling a failure in the model training
-             process.   
+- Flask Web Application for Machine Learning Prediction : 
 
-   - Note : why i use a "ret" in code :
-      - By evaluating `ret`, the application can provide immediate feedback to the user regarding the success or failure of the training operation. 
-      - This mechanism enhances the application's robustness, enabling precise error handling and user communication based on the outcome of the model
-        training process.  
+- 1. Imports:
 
-   - Note for `Senior code` : 
-      - In the 
+   - The code begins by importing necessary modules:
+   - Flask: for creating the web application.
+   - render_template: for rendering HTML templates.
+   - request: for handling HTTP requests.
+   - jsonify: for converting Python objects to JSON.
+   - subprocess: for running shell commands.
+   - numpy and pandas: for numerical operations and data manipulation.
+   - PredictionPipeline: presumably a custom class for making predictions.
 
-      - Use a WSGI Server: Replace Flask's built-in server with a WSGI server like Gunicorn or uWSGI for improved performance and security.
-      - Secure Training Route: The /train route uses a GET request, which is typically used for retrieving data. Consider changing this to a POST request if 
-        the training process changes server state or involves substantial computation, to align with HTTP standards and improve security. 
-      - Error Handling: Implement more detailed error handling in your training route to manage and log different types of failures more effectively.
-      - Logging: Incorporate logging to capture detailed application performance and error information, aiding in troubleshooting and monitoring.
-      - Asynchronous Execution: If main.py is time-consuming, consider running it asynchronously or in a background task to prevent blocking the web server 
-        thread.
+- 2. Flask App Initialization:
+  - app = Flask(__name__) initializes a new Flask web application.
 
-92- 
+- 3. Home Page Route:
+  - @app.route('/', methods=['GET']) defines the route for the home page.
+  - When a GET request is made to the root URL (/), the homePage() function is called, rendering the index.html template.
+
+- 4. Training Route:
+  - @app.route('/train', methods=['POST']) defines the route for training the model.
+  - When a POST request is made to /train, the training() function is called.
+  - This function runs the main.py script using subprocess.run(), handling the training process.
+  - It returns a JSON response with a success message and training details if successful, or an error message and details if training fails.
+
+- 5. Prediction Route:
+  - @app.route('/predict', methods=['POST', 'GET']) defines the route for making predictions.
+  - When a POST request is made to /predict, the predict() function is called.
+  - It extracts input features from the request, processes the data, and uses PredictionPipeline to make predictions.
+  - The prediction is displayed in the results.html template.
+  - If an exception occurs, it returns a JSON response with an error message.
+
+- 6. Running the App:
+  - The script checks if it's being run directly and starts the Flask application on a specified port (defaulting to 8080 if not specified).
+  - This Flask application provides endpoints for training a machine learning model (/train) and making predictions (/predict) through a web interface. Ensure that necessary dependencies are installed and configurations are set up accordingly before running the application.
+
+   - This Flask application provides endpoints for training a machine learning model (/train) and making predictions (/predict) through a web interface. Ensure that necessary dependencies are installed and configurations are set up accordingly before running the application.
+
+92- Create "results.html" inside a "templates" .
+93- c 
 
