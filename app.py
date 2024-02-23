@@ -30,7 +30,7 @@ def predict():
                               'pH', 'sulphates', 'alcohol']
             data = []
             for feature in input_features:
-                form_key = feature.replace(" ", "_")  # Adjusting form field names to match HTML naming
+                form_key = feature.replace(" ", "_")              # this code replaces spaces with underscores in the feature names to match the html form input names 
                 try:
                     value = float(request.form.get(form_key, 0))  # Default to 0 if key not found
                 except ValueError:
