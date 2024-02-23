@@ -20,35 +20,36 @@ def training():
     except subprocess.CalledProcessError as e:
         return jsonify({"message": "Training failed", "error": e.stderr}), 500
 
-@app.route('/predict', methods=['POST', 'GET'])
+@app.route('/predict', methods=['GET'])
+def predict_form():
+    return render_template('index.html')
+
+@app.route('/predict', methods=['POST'])
 def predict():
-    if request.method == 'POST':
-        try:
-            # Feature names as used in the model
-            input_features = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
-                              'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
-                              'pH', 'sulphates', 'alcohol']
-            data = []
-            for feature in input_features:
-                form_key = feature.replace(" ", "_")              # this code replaces spaces with underscores in the feature names to match the html form input names 
-                try:
-                    value = float(request.form.get(form_key, 0))  # Default to 0 if key not found
-                except ValueError:
-                    return jsonify({"message": "Invalid input for feature: {}".format(feature)}), 400
-                data.append(value)
+    try:
+        # Feature names as used in the model
+        input_features = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
+                          'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
+                          'pH', 'sulphates', 'alcohol']
+        data = []
+        for feature in input_features:
+            form_key = feature.replace(" ", "_")              # Replace spaces with underscores in the feature names
+            try:
+                value = float(request.form.get(form_key, 0))  # Default to 0 if key not found
+            except ValueError:
+                return jsonify({"message": "Invalid input for feature: {}".format(feature)}), 400
+            data.append(value)
 
-            # Convert list to pandas DataFrame
-            data_df = pd.DataFrame([data], columns=input_features)
+        # Convert list to pandas DataFrame
+        data_df = pd.DataFrame([data], columns=input_features)
 
-            prediction_pipeline = PredictionPipeline()
-            prediction = prediction_pipeline.prediction(data_df)  # Pass DataFrame to prediction
+        prediction_pipeline = PredictionPipeline()
+        prediction = prediction_pipeline.prediction(data_df)  # Pass DataFrame to prediction
 
-            return render_template('results.html', prediction=str(prediction))
-        except Exception as e:
-            return jsonify({"message": "An error occurred during prediction", "error": str(e)}), 500
-    else:
-        return render_template('index.html')
-    
+        return render_template('results.html', prediction=str(prediction))
+    except Exception as e:
+        return jsonify({"message": "An error occurred during prediction", "error": str(e)}), 500
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
-    app.run(host="0.0.0.0", port=port, debug=True)  # Added debug=True for development. Remove in production.
+    app.run(host="0.0.0.0", port=port, debug=True)  # Remember to set debug=False in production
