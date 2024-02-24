@@ -159,5 +159,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Ignore files and directories directly within "artifacts"
-artifacts/*
+
+# Ignore files and directories directly within "artifacts" . -------> artifacts/*
+
+# Important Note :
+# At a first of project we add "artifacts/*" to .gitignore file, But after that we need to add "artifacts/*" to .gitignore file and delete "artifacts/*" from .gitignore file.
+
