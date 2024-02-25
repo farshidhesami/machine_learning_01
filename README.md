@@ -63,15 +63,15 @@ The dataset, hosted on [my GitHub profile](https://github.com/farshidhesami/mach
    ```bash
    python app.py
    ```
-   Access the web application at [http://127.0.0.1:8080] for inputs and predictions, and [http://127.0.0.1:8080/predict] for the interactive prediction interface.
+- Access the web application at [http://127.0.0.1:8080] for inputs and predictions, and [http://127.0.0.1:8080/predict] for the interactive prediction interface.
 
-## [http://127.0.0.1:8080]
+## Web Application Input Interface
 
-![alt text](image.png)
+![Web Application Input Data](images/web%20application%20input%20data.png)
 
-## [http://127.0.0.1:8080/predict] 
+## Web Application Prediction Interface
 
-![alt text](image-1.png)
+![Web Application Predict](images/web%20application%20predict.png)
 
 ## File Structure
 - `src/`: Core source code.
