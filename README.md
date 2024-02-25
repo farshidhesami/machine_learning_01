@@ -67,11 +67,11 @@ The dataset, hosted on [my GitHub profile](https://github.com/farshidhesami/mach
 
 ## Web Application Input Interface
 
-![Web Application Input Data](images/web%20application%20input%20data.png)
+![Web Application Input Data](images/web%20application%20input%20data.jpg)
 
 ## Web Application Prediction Interface
 
-![Web Application Predict](images/web%20application%20predict.png)
+![Web Application Predict](images/web%20application%20predict.jpg)
 
 ## File Structure
 - `src/`: Core source code.
