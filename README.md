@@ -10,24 +10,24 @@ The dataset, hosted on [my GitHub profile](https://github.com/farshidhesami/mach
 ## Pipeline and Configuration Updates
 
 ### Pipeline Stages
-1. **Data Ingestion** (`01_data_ingestion.ipynb`): Ingesting the dataset for preliminary exploration.
-2. **Data Validation** (`02_data_validation.ipynb`): Verifying data quality and integrity.
-3. **Data Transformation** (`03_data_transformation.ipynb`): Preprocessing data for effective model training.
-4. **Model Training** (`04_model_trainer.ipynb`): Training the machine learning model.
-5. **Model Evaluation** (`05_model_evaluation.ipynb`): Assessing the model's performance.
-6. **Prediction** (`prediction.py`): Implementing the model for predictions.
-7. **Web Application** (`app.py`): Creating a Flask web application for interactive model utilization.
+1.  Data Ingestion  (`01_data_ingestion.ipynb`): Ingesting the dataset for preliminary exploration.
+2.  Data Validation  (`02_data_validation.ipynb`): Verifying data quality and integrity.
+3.  Data Transformation  (`03_data_transformation.ipynb`): Preprocessing data for effective model training.
+4.  Model Training  (`04_model_trainer.ipynb`): Training the machine learning model.
+5.  Model Evaluation   (`05_model_evaluation.ipynb`): Assessing the model's performance.
+6.  Prediction  (`prediction.py`): Implementing the model for predictions.
+7.  Web Application  (`app.py`): Creating a Flask web application for interactive model utilization.
 
 ### Configuration and Deployment
-1. **Update config.yaml**: Setting configurations for the project.
-2. **Update schema.yaml**: Defining data schema for accurate validation.
-3. **Update params.yaml**: Specifying parameters for the model training process.
-4. **Update the Entity**: Adjusting data model entities as required.
-5. **Update the Configuration Manager in src/config**: Managing configurations for the project.
-6. **Update the Components**: Refining modular components of the project.
-7. **Update the Pipeline**: Enhancing the data processing and ML pipeline.
-8. **Update main.py**: Finalizing the main execution script.
-9. **Update app.py**: Improving the Flask web application for enhanced user engagement.
+1.  Update config.yaml : Setting configurations for the project.
+2.  Update schema.yaml : Defining data schema for accurate validation.
+3.  Update params.yaml : Specifying parameters for the model training process.
+4.  Update the Entity : Adjusting data model entities as required.
+5.  Update the Configuration Manager in src/config : Managing configurations for the project.
+6.  Update the Components : Refining modular components of the project.
+7.  Update the Pipeline : Enhancing the data processing and ML pipeline.
+8.  Update main.py : Finalizing the main execution script.
+9.  Update app.py : Improving the Flask web application for enhanced user engagement.
 
 ## Getting Started
 
@@ -37,29 +37,29 @@ The dataset, hosted on [my GitHub profile](https://github.com/farshidhesami/mach
 - Visual Studio Code or any IDE/Code Editor
 
 ### Installation and Setup
-1. **Clone the Repository**: 
+1.  Clone the Repository : 
    ```bash
    git clone https://github.com/farshidhesami/machine_learning_01.git
    ```
-2. **Navigate to the Project Directory**:
+2.  Navigate to the Project Directory :
    ```bash
    cd machine_learning_01
    ```
-3. **Install Dependencies**:
+3.  Install Dependencies :
    ```bash
    pip install -r requirements.txt
    ```
-4. **Initialize the Project Structure**:
+4.  Initialize the Project Structure :
    ```bash
    python template.py
    ```
 
 ### Usage
-1. **Run the Main Pipeline**:
+1.  Run the Main Pipeline :
    ```bash
    python main.py
    ```
-2. **Web Application**:
+2.  Web Application :
    ```bash
    python app.py
    ```
@@ -84,9 +84,9 @@ The dataset, hosted on [my GitHub profile](https://github.com/farshidhesami/mach
 - `app.py`: Flask application for model deployment.
 
 ## Contact
-- **Farshid Hesami**
-  - **GitHub**: [Farshid Hesami's GitHub](https://github.com/farshidhesami)
-  - **LinkedIn**: [Farshid Hesami on LinkedIn](https://linkedin.com/in/farshidhesami)
+-  Farshid Hesami :
+  -  GitHub : [Farshid Hesami's GitHub](https://github.com/farshidhesami)
+  -  LinkedIn : [Farshid Hesami on LinkedIn](https://linkedin.com/in/farshidhesami)
 
 ## Acknowledgments
 This project is a showcase of how machine learning can bring a new level of precision and objectivity to traditional industries like wine making, demonstrating the potential for data-driven decision-making in enhancing quality assessment processes.

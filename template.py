@@ -75,3 +75,8 @@ for filepath_str in list_of_files:
         logging.info(f"Created or verified file: {filepath}")
     else:
         logging.info(f"{filepath.name} already exists")
+        
+        
+        
+        
+
